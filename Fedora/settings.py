@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "people",
     "artifacts",
+    "books",
 ]
 
 MIDDLEWARE = [
@@ -92,18 +93,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
+
 ]
 
 
@@ -135,3 +125,5 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',    # more discoverable, vulnerable to XSS
     ]
 }
+
+LOGIN_REDIRECT_URL = "/books/library/"

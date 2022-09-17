@@ -18,6 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),  # Use the built-in authentication URLs
     path("people/", include("people.urls")),
     path("artifacts/", include("artifacts.urls")),
+    path("books/", include("books.urls")),
 ]
